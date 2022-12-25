@@ -31,9 +31,9 @@ jobs:
       run: mvn test -P orderPlacement -Dbrowser=chromeHeadless
     - name: Deploy report to Github Pages
       uses: peaceiris/actions-gh-pages@v2
-      with:
-        deploy_key: ${{ secrets.PERSONAL_TOKEN }}
-        publish_dir: ./reports/index.html
+      env:
+        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_DIR: ./reports/index.html
     
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
