@@ -32,7 +32,7 @@ jobs:
     - name: Deploy report to Github Pages
       uses: peaceiris/actions-gh-pages@v2
       with:
-        github-token: ${{ secrets.MY_TOKEN }}
+        github-token: ${{ secrets.PERSONAL_TOKEN }}
         publish_dir: ./reports/index.html
     
 
